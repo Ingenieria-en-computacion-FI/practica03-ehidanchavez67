@@ -8,50 +8,36 @@
 */
 struct Nodo
 {
-    /* TODO */
+    int dato;
 };
-
-
 /* Crear un nodo dinámicamente */
 Nodo* crearNodo(int valor)
 {
-    /* TODO
-       1 Reservar memoria con malloc
-       2 Verificar que la memoria se haya asignado
-       3 Inicializar el valor del nodo
-       4 Regresar el nodo
-    */
-
-    return NULL;
+    nodo* nuevo (nodo*)malloc(sizeof(nodo));
+    if (!nuevo) {
+       printf("Error: Opcion invalida\n");
+        return NULL;
+    }
+    nuevo->dato = valor;   
 }
-
-
 /* Obtener el valor almacenado */
-int obtenerValor(Nodo* nodo)
+int obtenerValor(Nodo* n)
 {
-    /* TODO
-       1 Verificar que el nodo no sea NULL
-       2 Regresar el valor almacenado
-    */
-
-    return 0;
+    if(!n) return 0;
+    return n->dato;
 }
-
-
 /* Modificar el valor almacenado */
-void asignarValor(Nodo* nodo, int valor)
+void asignarValor(Nodo* n, int nuevovalor)
 {
-    /* TODO
-       1 Verificar que el nodo no sea NULL
-       2 Asignar el nuevo valor
-    */
+    if (!n) {
+       n->dato = nuevoValor;
+    }
 }
-
-
 /* Liberar memoria del nodo */
-void destruirNodo(Nodo* nodo)
+void destruirNodo(Nodo* n)
 {
-    /* TODO
-       Liberar la memoria usando free
-    */
-}
+    if(!n) {
+       free(n);
+       printf("El nodo ha dejado de existir\n");
+    }
+]
