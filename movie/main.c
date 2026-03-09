@@ -1,42 +1,29 @@
-#include <stdio.h>
-#include "pelicula.h"
+#include "pelicula1.h"
 
-int main()
-{
+int main(){
 
-    printf("Prueba del TAD Pelicula\n");
+    Pelicula *p;
 
-    /* TODO
-       Crear una película
-    */
-    Pelicula* p = NULL;
+// Crear la pelicula
+    p = crearPelicula("Eterno resplandor de una mente sin recuerdos","Romance",2004);
 
+// Agregar Directores
+    agregarDirector(p,"Michel Gondry");
 
-    /* TODO
-       Agregar algunos directores
-    */
+//Imprimir la pelicula
+    printf("===Datos de la pelicula===\n");
+    imprimir(p);
 
+//Cambiar genero
 
-    /* TODO
-       Imprimir película
-    */
+    cambiarGenero(p,"Ciencia Ficcion");
 
+// Imprimir nuevos datos
+    printf("\nDespues de cambiar el genero:\n");
+    imprimir(p);
 
-    printf("\nCambiar genero\n");
-
-    /* TODO
-       Cambiar genero
-    */
-
-
-    /* TODO
-       Imprimir nuevamente
-    */
-
-
-    /* TODO
-       Liberar memoria
-    */
+//Destruir a la pelicula y liberar memoria :(
+    destruir(p);
 
     return 0;
 }
