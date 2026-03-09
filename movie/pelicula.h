@@ -3,13 +3,14 @@
 
 #define MAX_DIRECTORES 10
 
-typedef struct{
+struct pelicula{
     char *nombre;
     char *genero;
     short year;
     char *directores[MAX_DIRECTORES];
     short numDirectores;
-} Pelicula;
+};
+typedef struct pelicula Pelicula;
 
 Pelicula* crearPelicula(const char *nombre,const char *genero,short year);
 void imprimir(Pelicula *p);
