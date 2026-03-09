@@ -4,27 +4,16 @@
 int main()
 {
     printf("Prueba del TAD Nodo\n");
+    nodo* nodoT = crearNodo[10];
 
-    /* TODO
-       1 Crear un nodo con valor 10
-    */
-    Nodo* n = NULL;
+    if(nodoT !== NULL) {
+        printf("Valor inicial: %d\n", obtenerValor(nodoT));
 
-    /* TODO
-       2 Mostrar el valor del nodo usando obtenerValor
-    */
+    asignarValor(nodoT, 25);
+    printf("Nuevo valor: %d\n", obtenerValor(nodoT));
 
-    /* TODO
-       3 Cambiar el valor a 25 usando asignarValor
-    */
-
-    /* TODO
-       4 Mostrar nuevamente el valor
-    */
-
-    /* TODO
-       5 Liberar el nodo con destruirNodo
-    */
-
+    destruirNodo(nonoT);
+    
+    }
     return 0;
 }
