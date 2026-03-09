@@ -14,7 +14,7 @@ struct Nodo
 Nodo* crearNodo(int valor)
 {
     nodo* nuevo (nodo*)malloc(sizeof(nodo));
-    if (!nuevo) {
+    if (nuevo == NULL) {
        printf("Error: Opcion invalida\n");
         return NULL;
     }
@@ -23,20 +23,20 @@ Nodo* crearNodo(int valor)
 /* Obtener el valor almacenado */
 int obtenerValor(Nodo* n)
 {
-    if(!n) return 0;
+    if(n == NULL) return 0;
     return n->dato;
 }
 /* Modificar el valor almacenado */
 void asignarValor(Nodo* n, int nuevovalor)
 {
-    if (!n) {
+    if (n != NULL) {
        n->dato = nuevoValor;
     }
 }
 /* Liberar memoria del nodo */
 void destruirNodo(Nodo* n)
 {
-    if(!n) {
+    if(n !== NULL) {
        free(n);
        printf("El nodo ha dejado de existir\n");
     }
